@@ -76,6 +76,24 @@ public class ArrayTests {
         }
         System.out.println(arrayList.get(arrayList.size() - 1));
     }
+    @Test
+    void positiveTest(){
+        List<Integer> arrayList = new ArrayList<>();
+        arrayList.add(-3);
+        arrayList.add(1);
+        arrayList.add(6);
+        arrayList.add(3);
+        arrayList.add(-2);
+        arrayList.add(0);
+
+
+        for (int i = 0; i < arrayList.size(); i++) {
+            if (arrayList.get(i) < 0) {
+                arrayList.remove(i);
+            }
+        }
+        System.out.println(arrayList);
+    }
 
 }
 
